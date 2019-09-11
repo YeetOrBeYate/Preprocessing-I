@@ -66,55 +66,72 @@ html, body {
 	display: flex;
 }
 
+.width(){
+	width: 100%;
+}
+
+@backColor: peachpuff;
+@baseFont: 2rem;
+
 .container{
 	padding-top: 30px;
-	font-size: 2rem;
+	font-size: @baseFont;
 	width: 70%;
 	margin: 0 auto;
-	border: 1px solid black;
 	background: ivory;
 
 	@media screen and (max-width: 500px){
-		width: 100%;
+		.width();
 	}
 
 	header{
-		width: 100%;
+		.width();
 		.flex();
 		justify-content: flex-end;
 
 	}
 
 	nav{
-		border: 1px solid black;
+
 		.flex();
-		justify-content: space-around;
-		width: 80%;
+		justify-content: space-evenly;
+		width: 60%;
+
 
 		@media screen and (max-width: 500px){
-			width: 100%;
+			.width();
 			flex-direction: column;
 		}
+
+
 
 		a{
 			text-decoration: none;
 			color: black;
-			width: 100%;
-			border: 1px solid red;
+			.width();
 
 			@media screen and (max-width: 500px){
 				text-align:center;
 				padding: 5% 0;
 			}
 		}
+
+		a:hover{
+			text-decoration: underline;
+			color:skyblue;
+		}
+
+		:nth-child(4){
+			margin-right: 55px;
+		}
 	}
 
 	.color{
-		background: peachpuff;
+		background: @backColor;
 	}
 
 	.content, .landing{
-		border:1px solid black;
+
 		padding: 3% 8%;
 		margin: 2%;
 
@@ -131,9 +148,14 @@ html, body {
 			background: ivory;
 		}
 
+		button:hover{
+			background: skyblue;
+			color: white;
+		}
+
 		img{
 			@media screen and (max-width: 500px){
-				width: 100%;
+				.width();
 			}
 		}
 	}
@@ -148,12 +170,12 @@ html, body {
 		}
 
 		div{
-			border: 1px solid black;
+
 			width: 45%;
 			padding: 1%;
 
 			@media screen and (max-width: 500px){
-				width: 100%;
+				.width();
 				margin: 5% 0;
 			}
 

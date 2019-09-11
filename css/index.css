@@ -141,7 +141,6 @@ body body {
   font-size: 2rem;
   width: 70%;
   margin: 0 auto;
-  border: 1px solid black;
   background: ivory;
 }
 @media screen and (max-width: 500px) {
@@ -155,10 +154,9 @@ body body {
   justify-content: flex-end;
 }
 .container nav {
-  border: 1px solid black;
   display: flex;
-  justify-content: space-around;
-  width: 80%;
+  justify-content: space-evenly;
+  width: 60%;
 }
 @media screen and (max-width: 500px) {
   .container nav {
@@ -170,7 +168,6 @@ body body {
   text-decoration: none;
   color: black;
   width: 100%;
-  border: 1px solid red;
 }
 @media screen and (max-width: 500px) {
   .container nav a {
@@ -178,12 +175,18 @@ body body {
     padding: 5% 0;
   }
 }
+.container nav a:hover {
+  text-decoration: underline;
+  color: skyblue;
+}
+.container nav :nth-child(4) {
+  margin-right: 55px;
+}
 .container .color {
   background: peachpuff;
 }
 .container .content,
 .container .landing {
-  border: 1px solid black;
   padding: 3% 8%;
   margin: 2%;
 }
@@ -199,6 +202,11 @@ body body {
   border: none;
   color: black;
   background: ivory;
+}
+.container .content button:hover,
+.container .landing button:hover {
+  background: skyblue;
+  color: white;
 }
 @media screen and (max-width: 500px) {
   .container .content img,
@@ -217,7 +225,6 @@ body body {
   }
 }
 .container .overView div {
-  border: 1px solid black;
   width: 45%;
   padding: 1%;
 }
