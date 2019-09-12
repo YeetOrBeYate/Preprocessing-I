@@ -1,8 +1,9 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+//tiny tiny change
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -13,8 +14,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,13 +26,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -55,5 +54,159 @@ table {
 
 html, body {
     height: 100%;
+		font-size: 62.5%;
+
+		body {
+			line-height: 1;
+		}
+
 }
 
+/***ASIGNMENT LESS CODE***/
+
+.flex(){
+	display: flex;
+}
+
+.width(){
+	width: 100%;
+}
+
+@backColor: peachpuff;
+@baseFont: 2rem;
+
+.container{
+	padding-top: 30px;
+	font-size: @baseFont;
+	width: 70%;
+	margin: 0 auto;
+	background: ivory;
+
+	@media screen and (max-width: 500px){
+		.width();
+	}
+
+	header{
+		.width();
+		.flex();
+		justify-content: flex-end;
+
+	}
+
+	nav{
+
+		.flex();
+		justify-content: space-evenly;
+		width: 60%;
+
+
+		@media screen and (max-width: 500px){
+			.width();
+			flex-direction: column;
+		}
+
+
+
+		a{
+			text-decoration: none;
+			color: black;
+			.width();
+
+			@media screen and (max-width: 500px){
+				text-align:center;
+				padding: 5% 0;
+			}
+		}
+
+		a:hover{
+			text-decoration: underline;
+			color:skyblue;
+		}
+
+		:nth-child(4){
+			margin-right: 55px;
+		}
+	}
+
+	.color{
+		background: @backColor;
+	}
+
+	.content, .landing{
+
+		padding: 3% 8%;
+		margin: 2%;
+
+		h1{
+			font-size: 4rem;
+			padding: 1% 0;
+		}
+
+		button{
+			margin-top: .8%;
+			padding: 0.9%;
+			border: none;
+			color: black;
+			background: ivory;
+		}
+
+		button:hover{
+			background: skyblue;
+			color: white;
+		}
+
+		img{
+			@media screen and (max-width: 500px){
+				.width();
+			}
+		}
+	}
+
+	.overView{
+		.flex();
+		justify-content: space-between;
+
+		@media screen and (max-width: 500px){
+			flex-direction: column;
+			align-items: center;
+		}
+
+		div{
+
+			width: 45%;
+			padding: 1%;
+
+			@media screen and (max-width: 500px){
+				.width();
+				margin: 5% 0;
+			}
+
+			h1{
+				padding: 2% 0;
+			}
+
+			li{
+				padding: 5%;
+			}
+		}
+	}
+
+	.history{
+
+		.his-item{
+			padding: 1% 0;
+			h1{
+				font-size: 4rem;
+			}
+
+			h2{
+				font-size: 2.7rem;
+			}
+
+			span{
+				font-size: 1.8rem;
+				padding-left: 1%;
+			}
+		}
+	}
+}
